@@ -6,8 +6,11 @@ MENU = """(G)et a valid score
 (P)rint result
 (S)how stars
 (Q)uit"""
+MIN_SCORE=0
+MAX_SCORE=100
 def main():
     print(MENU)
+    score = get_score()
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "G":
@@ -25,6 +28,9 @@ def main():
 
 def get_score():
     score = float(input("Enter score: "))
+    while score<MIN_SCORE or score>MAX_SCORE:
+        print("Invalid Score")
+        score = float(input("Enter score: "))
     return score
 
 def get_result(score):
