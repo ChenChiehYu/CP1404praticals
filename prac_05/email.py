@@ -1,7 +1,10 @@
 EMAILS = dict()
 
-user_email=input("Email: ")
+user_email = input("Email: ")
 while user_email != "":
-    last_name = user_email.split("@")[0]
-    print(f"Is your name {last_name}? (Y/n)")
-    user_email=input("Email: ")
+    user_name = user_email.split("@")[0]
+    option = input(f"Is your name {user_name}? (Y/n)").lower()
+    if option == "y" or option == "":
+        user_email = input("Email: ")
+    else:
+        user_name=input("Name: ")
