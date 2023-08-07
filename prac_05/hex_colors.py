@@ -11,4 +11,11 @@ CODE_TO_COLOR = {"AMBER": "#ffbf00",
                  }
 print(CODE_TO_COLOR)
 
-color_code = input("Enter a ")
+color_code = input("Enter a color name: ")
+while color_code != "":
+    color_code = color_code.upper()
+    if color_code in CODE_TO_COLOR:
+        print(color_code, " is ", CODE_TO_COLOR[color_code])
+    else:
+        print("Invalid color name")
+    color_code = input("Enter a color name: ")
