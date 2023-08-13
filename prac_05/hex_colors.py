@@ -19,3 +19,4 @@ while color_code != "":
     else:
         print("Invalid color name")
     color_code = input("Enter a color name: ")
+
