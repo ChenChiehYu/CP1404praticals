@@ -16,6 +16,7 @@ try:
     print(fraction)
 except ValueError:
     print("Numerator and denominator must be valid numbers!")
+    numerator = int(input("Enter the numerator: "))
 except ZeroDivisionError:
     print("Cannot divide by zero!")
 print("Finished.")
